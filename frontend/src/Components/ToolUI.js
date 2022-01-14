@@ -30,17 +30,17 @@ const ToolUI = (props) => {
 
     let handleMultiSelectonChange = (e) => {
         if (e.includes('Clear All')) {
-            if (e.length === 1) { setBool(e);}
+            if (e.length === 1) { setBool(e); }
             setDrop(dropBool)
         }
         else if (e.includes('Select All')) {
             setDrop(STATES)
         }
-        else if(e.length > 0){
-            if (e.length === 1) { setBool(e);}
+        else if (e.length > 0) {
+            if (e.length === 1) { setBool(e); }
             setDrop(e)
         }
-        else{
+        else {
             setDrop(dropBool)
         }
     }
@@ -52,13 +52,12 @@ const ToolUI = (props) => {
                 <DropdownList data={metricOptions} value={props.metric} onChange={(e) => { props.setMetric(e); }} />
                 <br />
                 start From:
-                <DatePicker value={startDate} onChange={(date) => setStart(date)} />
-                <br />
+                <DatePicker containerClassName='date' value={startDate} onChange={(date) => setStart(date)} />
                 To:
-                <DatePicker value={endDate} onChange={(date) => setEnd(date)} />
+                <DatePicker containerClassName='date' value={endDate} onChange={(date) => setEnd(date)} />
                 <br />
                 State(s):
-                <Multiselect className='multiselect' data={['Clear All', 'Select All', ...STATES]} value={droplist} onChange={handleMultiSelectonChange} />
+                <Multiselect containerClassName='multiselect' data={['Clear All', 'Select All', ...STATES]} value={droplist} onChange={handleMultiSelectonChange} />
             </div>
         </Card>
     );
