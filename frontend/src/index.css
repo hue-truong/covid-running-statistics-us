@@ -1,4 +1,5 @@
 body {
+  background-color: rgb(243, 243, 243);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -14,17 +15,21 @@ code {
 .container {
   float: left;
   display: flex;
-  width: 500px;
-  text-align: center;
-  margin: 0 auto;
+  margin-top: 4%;
+  margin-left: 8%
 }
-.figure {
-  padding-top: 50px;
+.toolui-card{
+  margin-top: 7%;
+  margin-left: 2%;
+  height: 450px;
+  width: 340px;
+  position: 'relative';
 }
 .toolui{
-  padding-top: 50%;
+  padding-top: 6%;
+  margin-left:6%;
+  width: 300px;
 }
-.state-selection {
-  margin: 0 auto;
-  width: 500px;
+.multiselect{
+  position:absolute
 }
