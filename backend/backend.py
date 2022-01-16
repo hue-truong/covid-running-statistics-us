@@ -12,7 +12,7 @@ from flask_cors import CORS
 
 T_FORMAT = "%Y-%m-%d"
 
-app = Flask(__name__)
+app = Flask(__name__ , static_folder='frotend/build',static_url_path='')
 CORS(app)
 
 @app.route('/', methods=['POST'])
